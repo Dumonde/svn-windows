@@ -12,7 +12,6 @@ if not exist \downloads md \downloads
 cd \downloads
 
 if "%platform%"=="x64" C:\OpenSSL-v111-Win64\bin\openssl version
-if "%platform%"=="x86" C:\OpenSSL-v111-Win32\bin\openssl version
 
 echo Downloading %sqlite_dist%
 if not exist sqlite-amalgamation-%sqlite_version%.zip appveyor DownloadFile %sqlite_dist%
@@ -29,8 +28,8 @@ if not exist subversion-%svn_version%\gen-make.py appveyor DownloadFile https://
 if not exist subversion-%svn_version%\gen-make.py 7z x -y subversion-%svn_version%.tar.gz
 if not exist subversion-%svn_version%\gen-make.py 7z x -y subversion-%svn_version%.tar
 
-if not exist serf-1.3.9.zip appveyor DownloadFile https://www.apache.org/dist/serf/serf-1.3.9.zip
-if     exist serf-1.3.9.zip 7z x -y serf-1.3.9.zip
+if not exist serf-1.3.10.zip appveyor DownloadFile https://www.apache.org/dist/serf/serf-1.3.10.zip
+if     exist serf-1.3.10.zip 7z x -y serf-1.3.10.zip
 
 dir \downloads
 if exist \downloads\zlib-%zlib_version% dir \downloads\zlib-%zlib_version%
