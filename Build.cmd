@@ -20,7 +20,7 @@ cd \downloads\subversion-%svn_version%
 
 if "%run_build%"=="no" exit 0
 
-echo C:\Python312-x64\python gen-make.py --release -t vcproj --vsnet-version=2017 --with-apr-util=C:\Apache24 --with-apr=C:\Apache24 --with-apr-iconv=C:\Apache24 --with-apr_memcache=C:\Apache24 --with-httpd=C:\Apache24 --with-openssl=C:\OpenSSL-v111-Win64 --with-zlib=C:\Apache24 --with-sqlite=C:\downloads\sqlite-amalgamation-%sqlite_version% --with-jdk="C:\Program Files\Java\jdk9" --with-serf=\downloads\serf-1.3.10
-C:\C:\Python312-x64\python gen-make.py --release -t vcproj --vsnet-version=2017 --with-apr-util=C:\Apache24 --with-apr=C:\Apache24 --with-apr-iconv=C:\Apache24 --with-apr_memcache=C:\Apache24 --with-httpd=C:\Apache24 --with-openssl=C:\OpenSSL-v111-Win64 --with-zlib=C:\Apache24 --with-sqlite=C:\downloads\sqlite-amalgamation-%sqlite_version% --with-jdk="C:\Program Files\Java\jdk9" --with-serf=\downloads\serf-1.3.10
+echo C:\Python35-x64\python gen-make.py --release -t vcproj --vsnet-version=2017 --with-apr-util=C:\Apache24 --with-apr=C:\Apache24 --with-apr-iconv=C:\Apache24 --with-apr_memcache=C:\Apache24 --with-httpd=C:\Apache24 --with-openssl=C:\OpenSSL-v111-Win64 --with-zlib=C:\Apache24 --with-sqlite=C:\downloads\sqlite-amalgamation-%sqlite_version% --with-jdk="C:\Program Files\Java\jdk9" --with-serf=\downloads\serf-1.3.10
+C:\Python35-x64\python gen-make.py --release -t vcproj --vsnet-version=2017 --with-apr-util=C:\Apache24 --with-apr=C:\Apache24 --with-apr-iconv=C:\Apache24 --with-apr_memcache=C:\Apache24 --with-httpd=C:\Apache24 --with-openssl=C:\OpenSSL-v111-Win64 --with-zlib=C:\Apache24 --with-sqlite=C:\downloads\sqlite-amalgamation-%sqlite_version% --with-jdk="C:\Program Files\Java\jdk9" --with-serf=\downloads\serf-1.3.10
 if "%run_clean%"=="yes" devenv subversion_vcnet.sln /Clean "Release|x64" || exit 0
 devenv subversion_vcnet.sln /Build "Release|x64" || exit 0
